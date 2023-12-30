@@ -1,0 +1,75 @@
+/*
+Theme Name: Astra Child
+Theme URI: https://wpastra.com/
+Template: astra
+Author: Brainstorm Force
+Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+Description: Astra is fast, fully customizable &amp; beautiful WordPress theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL &amp; Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained &amp; Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and WooCommerce ready theme that you can use for building any kind of website!
+Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog
+Version: 4.5.2.1703951519
+Updated: 2023-12-30 15:51:59
+
+*/
+
+.form-check {
+    --border: #d1d5db !important;
+    --cursor: #89909e !important;
+    --checked: #220899 !important;
+    --checked-cursor: #fff !important;
+    position: relative !important;
+    font-size: 16px !important;
+  }
+  
+  .form-check input {
+    position: absolute !important;
+    opacity: 0 !important;
+  }
+  
+  .form-check label {
+    display: grid !important;
+    grid-template-columns: 2em 1fr !important;
+    grid-template-areas: "checkbox label" !important;
+    gap: 0.7em !important;
+  }
+  
+  .form-check label::before,
+  .form-check label::after {
+    grid-area: checkbox !important;
+    content: "" !important;
+    display: block !important;
+    margin-top: 0.1em !important;
+  }
+  
+  .form-check label::before {
+    width: 100% !important;
+    height: 1em !important;
+    border-radius: 1em !important;
+    border: solid 1px var(--border) !important;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s !important;
+  }
+  
+  .form-check label::after {
+    position: relative !important;
+    left: 2px !important;
+    top: 2px !important;
+    width: calc(1em - 2px) !important;
+    height: calc(1em - 2px) !important;
+    border-radius: 50% !important;
+    background-color: var(--cursor) !important;
+    transition: background-color 0.3s, transform 0.3s !important;
+  }
+  
+  .form-check input:checked + label::before {
+    background-color: var(--checked) !important;
+    border-color: var(--checked) !important;
+  }
+  
+  .form-check input:checked + label::after {
+    background-color: var(--checked-cursor) !important;
+    transform: translateX(1em) !important;
+  }
+  
+  .form-check input:focus + label::before {
+    box-shadow: 0 0 0 0.25em #c4dbf9 !important;
+    border-color: var(--checked) !important;
+  }
